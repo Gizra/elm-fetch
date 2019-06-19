@@ -1,0 +1,10 @@
+.*.swp
+.DS_Store
+elm-stuff
+index.js
+elm.js
+index.html
+node_modules
+build
+tests/Doc
+.idea

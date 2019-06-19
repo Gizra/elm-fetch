@@ -1,0 +1,19 @@
+{
+    "type": "package",
+    "name": "Gizra/elm-fetch",
+    "summary": "Some conveniences for implementing the `update` function along with `fetch`",
+    "license": "MIT",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Update.Fetch"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "ccapndave/elm-update-extra": "4.0.0 <= v < 5.0.0",
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {
+        "elm-explorations/test": "1.1.0 <= v < 2.0.0"
+    }
+}
