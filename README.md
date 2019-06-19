@@ -3,3 +3,8 @@
 # elm-fetch
 
 Some conveniences for implementing the `update` function with `fetch`.
+
+# Maintainers
+
+* [@rgrempel](https://github.com/rgrempel)
+
