@@ -1,9 +1,9 @@
-module Gizra.FetchSpec exposing (spec)
+module Update.FetchSpec exposing (spec)
 
 import Expect
-import Gizra.Update exposing (..)
 import List
 import Test exposing (..)
+import Update.Fetch exposing (andThenFetch)
 
 
 type alias Model =
@@ -38,8 +38,10 @@ fetch : Model -> List Msg
 fetch model =
     if List.member "fetch-4" model then
         []
+
     else if List.member "fetch-3" model then
         [ AddString "fetch-4" ]
+
     else
         [ AddString "fetch-1"
         , AddString "fetch-2"

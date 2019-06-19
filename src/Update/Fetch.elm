@@ -1,4 +1,4 @@
-module Gizra.Fetch exposing (andThenFetch, sequenceExtra)
+module Update.Fetch exposing (andThenFetch, sequenceExtra)
 
 {-| Some conveniences for implementing the `update` function.
 
