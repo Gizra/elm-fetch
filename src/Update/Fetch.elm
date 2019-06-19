@@ -1,6 +1,6 @@
 module Update.Fetch exposing (andThenFetch, sequenceExtra)
 
-{-| Some conveniences for implementing the `update` function.
+{-| Some conveniences for implementing the `update` function with `fetch`.
 
 Using the various functions in
 [ccapndave/elm-update-extra](http://package.elm-lang.org/packages/ccapndave/elm-update-extra/latest)

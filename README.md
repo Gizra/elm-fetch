@@ -2,4 +2,4 @@
 
 # elm-fetch
 
-Some conveniences for implementing the `update` function
+Some conveniences for implementing the `update` function with `fetch`.
