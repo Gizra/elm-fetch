@@ -131,7 +131,7 @@ Your `main` function would look something like:
             }
 
 `App.Update.update` is your normal update function.
-`App.Fetch.fetch` will likely look something like this, assuming you gave a Page called `Items`:
+`App.Fetch.fetch` will likely look something like this, assuming you have a Page called `Items`:
 
     {-| Call the needed `fetch` function, based on the active page.
     -}
