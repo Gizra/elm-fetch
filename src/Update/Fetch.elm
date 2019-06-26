@@ -118,6 +118,30 @@ will then get back is a function of the form `msg -> model -> ( model, Cmd msg)`
 that is, an `update` function that you can then pass to `programWithFlags` (or
 use in another way).
 
+Your `main` function would look something like:
+
+    main =
+        Browser.element
+            { init = App.Update.init
+
+            -- We wire `andThenFetch` here.
+            , update = Update.Fetch.andThenFetch App.Fetch.fetch App.Update.update
+            , view = App.View.view
+            , subscriptions = App.Update.subscriptions
+            }
+
+`App.Update.update` is your normal update function.
+`App.Fetch.fetch` will likely look something like this, assuming you have a Page called `Items`:
+
+    {-| Call the needed `fetch` function, based on the active page.
+    -}
+    fetch : App.Model.Model -> List App.Model.Msg
+    fetch model =
+        case model.activePage of
+            Items ->
+                Pages.Items.Fetch.fetch model.backend
+                    |> List.map (\subMsg -> MsgBackend subMsg)
+
 -}
 andThenFetch : (model -> List msg) -> (msg -> model -> ( model, Cmd msg )) -> msg -> model -> ( model, Cmd msg )
 andThenFetch fetch update msg model =
