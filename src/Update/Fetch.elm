@@ -135,7 +135,7 @@ Your `main` function would look something like:
 
     {-| Call the needed `fetch` function, based on the active page.
     -}
-    fetch : Model -> List Msg
+    fetch : App.Model.Model -> List App.Model.Msg
     fetch model =
         case model.activePage of
             Items ->
